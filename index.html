@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS GORILLAZ</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="game-container">
+    <h1 class="title">JS GORILLAZ</h1>
+
+    <div class="game-info">
+        <div class="player-score" id="player1Score">Player 1: 0</div>
+        <div class="wind-info" id="windInfo">Wind: 0</div>
+        <div class="player-score" id="player2Score">Player 2: 0</div>
+    </div>
+
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+    <div class="message" id="gameMessage"></div>
+
+    <div class="controls">
+        <div class="player-controls active" id="player1Controls">
+            <h3>Player 1 🦍</h3>
+            <div class="input-group">
+                <label for="player1Angle">Angle (0-360°):</label>
+                <input type="number" id="player1Angle" min="0" max="360" value="45" />
+            </div>
+            <div class="input-group">
+                <label for="player1Velocity">Velocity (1-200):</label>
+                <input type="number" id="player1Velocity" min="1" max="200" value="50" />
+            </div>
+            <button class="fire-button" onclick="fireShot(0)">🍌 FIRE!</button>
+        </div>
+
+        <div class="player-controls" id="player2Controls">
+            <h3>Player 2 🦍</h3>
+            <div class="input-group">
+                <label for="player2Angle">Angle (0-360°):</label>
+                <input type="number" id="player2Angle" min="0" max="360" value="45" />
+            </div>
+            <div class="input-group">
+                <label for="player2Velocity">Velocity (1-200):</label>
+                <input type="number" id="player2Velocity" min="1" max="200" value="50" />
+            </div>
+            <button class="fire-button" onclick="fireShot(1)">🍌 FIRE!</button>
+        </div>
+    </div>
+
+    <button class="new-game-button" onclick="startNewGame()">NEW GAME</button>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
